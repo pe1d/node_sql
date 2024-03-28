@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>About me</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div style="text-align: center;">
+            <h2>Driver table</h2>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name Driver</th>
+                    <th scope="col">Birth Day</th>
+                    <th scope="col">Place of Birth</th>
+                    <th scope="col">Date Joined</th>
+                    <th scope="col-12">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i=0; i < dataTable.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= i+1 %>
+                        </td>
+                        <td>
+                            <%= dataTable[i].id_driver %>
+                        </td>
+                        <td>
+                            <%= dataTable[i].name_driver %>
+                        </td>
+                        <td>
+                            <%= dataTable[i].date_of_birth %>
+                        </td>
+                        <td>
+                            <%= dataTable[i].place_of_birth %>
+                        </td>
+                        <td>
+                            <%= dataTable[i].date_joined %>
+                        </td>
+                        <td>
+                            <a href="/edit-crud?id=<%= dataTable[i].id%>" class="btn btn-primary" type="button">
+                                Edit
+                            </a>
+                            <a href="/delete-crud?id=<%= dataTable[i].id%>" class="btn btn-btn btn-warning"
+                                type="button">
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

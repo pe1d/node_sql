@@ -1,0 +1,53 @@
+/* Basic login container styling */
+.login-container {
+    width: 300px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form element styling */
+form {
+    display: flex; /* Arrange labels and inputs horizontally */
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45A049; /* Darker green on hover */
+}
+
+/* Additional styling for visual appeal (optional) */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #4CAF50; /* Match button color */
+    text-decoration: none;
+}
